@@ -1,0 +1,2 @@
+# head-mouse-assistive-technology
+Projeto open-source de mouse de cabeça para pessoas com deficiência, utilizando tecnologias de baixo custo para acessibilidade. O objetivo é proporcionar controle de dispositivos com movimentos da cabeça, facilitando a inclusão digital e autonomia.
