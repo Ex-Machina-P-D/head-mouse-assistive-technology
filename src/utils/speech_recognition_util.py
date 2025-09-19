@@ -1,8 +1,10 @@
 import speech_recognition as sr
 
-class SpeechRecognitionUtil:
+class SpeechRecognition:
     """
-    Classe utilitária para reconhecimento de fala.
+    Speech Recognition Utility.
+    
+    Capture voice & return as string.
     """
 
     def __init__(self):
@@ -25,9 +27,10 @@ class SpeechRecognitionUtil:
             print("Aguardando comando de voz...")
             try:
                 audio = self.recognizer.listen(source)
-                return self.recognizer.recognize_google(audio, language='pt-BR').lower()
+                command = self.recognizer.recognize_google(audio, language='pt-BR')
+                return command.lower()
             except sr.UnknownValueError:
-                return ""
+                return None
             except sr.RequestError as e:
                 print(f"Erro no serviço de reconhecimento de voz: {e}")
-                return ""
+                return None
